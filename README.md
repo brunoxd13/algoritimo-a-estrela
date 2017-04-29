@@ -1,4 +1,4 @@
-# algoritimo-a-estrela
+﻿# algoritimo-a-estrela
 
 
 O trabalho consiste na implementação de um agente capaz de guiar um rato através de um labirinto utilizando o Algoritmo busca heurística A* para planejar o caminho.
@@ -73,3 +73,6 @@ Forma de avaliação
 aluno.
 • Serão aceitos trabalhos atrasados, com penalização de 20% da nota  nal para cada dia de atraso, ou
 seja, após cinco dias, o grupo terá nota ZERO atribuída.
+
+
+

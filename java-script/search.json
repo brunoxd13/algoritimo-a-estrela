@@ -1,0 +1,87 @@
+[
+
+  
+  
+    {
+    "title"    : "Processamento Digital de Imagens",
+    "category" : "",
+    "tags"     : "floodfill, seedfill, histograma, equalização, motion detector, processamento digital, opencv, imagens, UFRN, Agostinho Brito, tiltshift, blur filter, DCA",
+    "url"      : "/projects/processamento-digital-imagens/",
+    "date"     : "2016-03-03 20:45:00 -0300",
+    "desc"     : "Algoritmos de processamento e tratamento de imagens com OpenCV"
+    },
+  
+    {
+    "title"    : "Programação Concorrente e Distribuída",
+    "category" : "",
+    "tags"     : "programação paralela, threads, MPI, OpenMP, DCA, UFRN, solucionário, manual solutions, Parallel Programing, Peter Pacheco, Samuel Xavier de Souza",
+    "url"      : "/projects/programacao-concorrente/",
+    "date"     : "2016-03-03 23:23:00 -0300",
+    "desc"     : "Resolução da lista de exercícios do livro _An Introduction to Parallel Programming_"
+    },
+  
+    {
+    "title"    : "Controle Inteligente - A* Algorithm",
+    "category" : "",
+    "tags"     : "A* Search Algorithm, algoritmo a*, chrono trigger, bootstrap css, html5, canvas game 2d, Breadth-First Search, BFS, Controle Inteligente, Fábio Meneghetti, UFRN, DCA",
+    "url"      : "/projects/controle-inteligente/",
+    "date"     : "2016-03-20 08:00:00 -0300",
+    "desc"     : "Implementação do _A* Search Algorithm_ em HTML5 Canvas Game 2D e JavaScript, utilizando _sprites_ do _Chrono Trigger_"
+    },
+  
+  
+  
+    {
+    "title"    : "Programação Concorrente e Distribuída (2)",
+    "category" : "",
+    "tags"     : "programação paralela, threads, MPI, OpenMP, DCA, UFRN, solucionário, exercises solutions, manual solutions, Parallel Programing, Peter Pacheco, Samuel Xavier de Souza",
+    "url"      : "/projects/programacao-concorrente/parallel-hardware-and-parallel-software/",
+    "date"     : "2016-03-27 20:30:00 -0300",
+    "desc"     : "Resolução da lista de exercícios do livro _An Introduction to Parallel Programming_"
+    },
+  
+    {
+    "title"    : "Programação Concorrente e Distribuída (3)",
+    "category" : "",
+    "tags"     : "programação paralela, threads, MPI, OpenMP, DCA, UFRN, solucionário, exercises solutions, manual solutions, Parallel Programing, Peter Pacheco, Samuel Xavier de Souza",
+    "url"      : "/projects/programacao-concorrente/distributed-memory-programming/",
+    "date"     : "2016-03-29 17:30:00 -0300",
+    "desc"     : "Resolução da lista de exercícios do livro _An Introduction to Parallel Programming_"
+    },
+  
+    {
+    "title"    : "Programação Concorrente e Distribuída (4)",
+    "category" : "",
+    "tags"     : "programação paralela, threads, MPI, OpenMP, DCA, UFRN, solucionário, exercises solutions, manual solutions, Parallel Programing, Peter Pacheco, Samuel Xavier de Souza",
+    "url"      : "/projects/programacao-concorrente/shared-memory-with-pthreads/",
+    "date"     : "2016-03-31 18:20:00 -0300",
+    "desc"     : "Resolução da lista de exercícios do livro _An Introduction to Parallel Programming_"
+    },
+  
+    {
+    "title"    : "Programação Concorrente e Distribuída (5)",
+    "category" : "",
+    "tags"     : "programação paralela, threads, MPI, OpenMP, DCA, UFRN, solucionário, exercises solutions, manual solutions, Parallel Programing, Peter Pacheco, Samuel Xavier de Souza",
+    "url"      : "/projects/programacao-concorrente/shared-memory-with-openmp/",
+    "date"     : "2016-04-09 18:43:00 -0300",
+    "desc"     : "Resolução da lista de exercícios do livro _An Introduction to Parallel Programming_"
+    },
+  
+  
+  
+    {
+    "title"    : "Sobre Jogos Nostálgicos",
+    "category" : "",
+    "tags"     : "games, nostalgia, chrono trigger, megaman, super mario world, donkey kong, bomberman, zelda, top gear, crash bandicoot, zelda, alex kidd, secret of mana",
+    "url"      : "/game/2016/04/16/sobre-jogos-nostalgicos/",
+    "date"     : "2016-04-16 20:09:00 -0300",
+    "desc"     : ""
+    },
+  
+  
+
+    {
+    }
+
+  ]
+

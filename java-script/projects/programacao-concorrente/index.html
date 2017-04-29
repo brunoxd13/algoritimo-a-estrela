@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação Concorrente e Distribuída - Dudevictor GitHub IO</title>
+    <meta name="description" content="Aspirante a Engenheiro de Computação e formado em Ciências e Tecnologia pela UFRN. Desenvolvedor Java Web na Logique Sistemas.">
+
+    <link rel="profile" href="http://gmpg.org/xfn/11"/>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" media="all" href="/css/style.css"/>
+    <link rel="stylesheet" type="text/css" media="all" href="/css/jquery.mmenu.all.css"/>
+    <link rel="stylesheet" href="/css/androidstudio.css">
+    <link rel="stylesheet" href="/css/toc.css">
+
+    <!-- Favicons generated at http://realfavicongenerator.net/ -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/favicons/manifest.json">
+    <link rel="shortcut icon" href="/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage" content="/favicons/mstile-144x144.png">
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <meta http-equiv="Content-Language" content="pt-BR">
+
+    <link rel="alternate"
+          hreflang="pt-BR"
+          href="http://dudevictor.github.io"/>
+    
+    
+    
+    
+    <link rel="alternate"
+          hreflang="en"
+          href="http://dudevictor.github.io/en"/>
+    
+
+    
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-56d8c061351eac81"></script>
+    
+
+    
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-74364829-1']);
+        _gaq.push(['_trackPageview']);
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    
+</head>
+
+
+    <body>
+
+    <nav id="my-menu">
+  <div>
+    <ul class="pages">
+      <li><a href=" /
+                                                    "><i class="fa fa-home"></i> Início</a></li>
+      <li>
+        <span><i class="fa fa-archive"></i> Todos os Projetos</span>
+        <ul>
+        
+          <li><a href=" /projects/processamento-digital-imagens/
+                                                    "><i class="fa fa-picture-o"></i>
+            Processamento Digital de Imagens</a></li>
+        
+          <li><a href=" /projects/programacao-concorrente/
+                                                    "><i class="fa fa-laptop"></i>
+            Programação Concorrente e Distribuída</a></li>
+        
+          <li><a href=" /projects/controle-inteligente/
+                                                    "><i class="fa fa-globe"></i>
+            Controle Inteligente - A* Algorithm</a></li>
+        
+        </ul>
+      </li>
+      <li><a href=" 
+                                                    /posts/"><i class="fa fa-file-text"></i> Todos os Artigos</a></li>
+      <li><a href=" 
+                                                    /search/"><i class="fa fa-search"></i> Pesquisar</a></li>
+    </ul>
+
+    <p class="links">
+  
+  <a href="https://br.linkedin.com/in/jvictoralves" target="_new"><i class="fa fa-linkedin"></i></a>
+  <a href="https://github.com/dudevictor" target="_new"><i class="fa fa-github-alt"></i></a>
+  <a href="https://fb.com/dudevictor" target="_new"><i class="fa fa-facebook"></i></a>
+  <a href="https://plus.google.com/103774151163089217676" target="_new"><i class="fa fa-google-plus"></i></a>
+  <a href="http://stackoverflow.com/users/2327056/jose-victor?tab=profile" target="_new"><i class="fa fa-stack-overflow"></i></a>
+</p>
+
+  </div>
+</nav>
+<div class="menu-button" href="#menu"><i class="fa fa-bars"></i></div>
+
+
+    <div class="page-content">
+      <div class="wrap">
+      <div class="container-fluid single">
+  <div class="row">
+
+    <div itemscope itemtype="http://schema.org/Article" class="col-md-12 project">
+      
+      <div class="thumb">
+        <i class="fa fa-laptop fa-4x"></i>
+      </div>
+      
+
+      <h1 class="header" itemprop="name">Programação Concorrente e Distribuída</h1>
+
+      <div class="author">
+        <small><i>
+          
+          por
+          <span itemprop="author">
+            
+              <a rel="author" href="https://plus.google.com/103774151163089217676">
+            
+            <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+              <span itemprop="name">José Victor Alves de Souza</span>
+            </span>
+            
+              </a>
+            
+          </span>
+          
+          em <span itemprop="datePublished" content="2014-08-28">03 de Março de 2016</span>
+        </i></small>
+      </div>
+
+      <div class="read-time">
+        <small>
+          Prof. Samuel Xavier de Souza, Departamento de Engenharia de Computação, UFRN 2015.2
+        </small>
+      </div>
+
+      <div class="anuncio-cabecalho">
+    
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- Cabeçalho Responsivo -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-9976909752880073"
+         data-ad-slot="1413881545"
+         data-ad-format="auto"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    
+</div>
+
+      <div class="content-panel content">
+        <span itemprop="articleBody"><p>Esta página tem como objetivo apresentar a resolução das listas de exercícios do livro <a href="https://www.cs.usfca.edu/%7Epeter/ipp/">&quot;An Introduction to Parallel Programming&quot;</a>
+de Peter Pacheco. A resolução dessas listas foi utilizada durante o curso de Programação Paralela no DCA / UFRN.</p>
+
+<p>Respostas dos capítulos:</p>
+
+<ul>
+<li><p>Chapter 01 - Why Parallel Computing?</p></li>
+<li><p><a href="/projects/programacao-concorrente/parallel-hardware-and-parallel-software/">Chapter 02 - Parallel Hardware and Parallel Software</a></p></li>
+<li><p><a href="/projects/programacao-concorrente/distributed-memory-programming/">Chapter 03 - Distributed-Memory Programming with MPI</a></p></li>
+<li><p><a href="/projects/programacao-concorrente/shared-memory-with-pthreads/">Chapter 04 - Shared-Memory Programming with Pthreads</a></p></li>
+<li><p><a href="/projects/programacao-concorrente/shared-memory-with-openmp/">Chapter 05 - Shared-Memory Programming with OpenMP</a></p></li>
+</ul>
+
+<p></span></p>
+
+<div class="tags">
+    <small>
+        <i class="fa fa-tags"></i>
+        programação paralela, threads, MPI, OpenMP, DCA, UFRN, solucionário, manual solutions, Parallel Programing, Peter Pacheco, Samuel Xavier de Souza
+    </small>
+</div>
+
+<p></div></p>
+
+<p><div class="content-panel content">
+    <span itemprop="articleBody"></p>
+
+<h4>Chapter 01 - Why Parallel Computing?</h4>
+
+<blockquote>
+<p><strong>1.1</strong> Devise formulas for the functions that calculate my first i and my last i in the global sum example.
+ Remember that each core should be assigned roughly the same number of elements of computations in the loop.
+  Hint: First consider the case when n is evenly divisible by p.</p>
+</blockquote>
+
+<p>No raciocínio, foi considerado que o intervalo é fechado em <code>my_first_i</code> e aberto em <code>my_last_i.</code>
+   A ocasião em que n é divisível por p é simples de formular, uma vez que o <code>my_first_i</code> é o index do núcleo multiplicado pela divisão entre n e p.
+    As distribuições são iguais nessa situação, então o <code>my_last_i</code> será igual ao <code>my_first_i</code> somado a divisão n/p.
+  No caso em que n não é divisível por p é necessário um maior tratamento.
+  Nessa situação, o resto da divisão tem que ser distribuído entre os outros núcleos. No máximo n - 1 (maior resto possível) itens serão distribuídos.</p>
+
+<blockquote>
+<p><strong>1.2</strong> We’ve implicitly assumed that each call to Compute next value requires roughly the same amount of work as the other calls.
+ How would you change your answer to the preceding question if call i = k requires k + 1 times as much work as the call with i = 0?
+  So if the first call (i = 0) requires 2 milliseconds, the second call (i = 1) requires 4, the third (i = 2) requires 6, and so on.</p>
+</blockquote>
+
+<p>Nessa situação, nota-se que o custo de cada requisição do compute next cresce a uma constante multiplicada por 2i.
+Uma estratégia que poderia ser tomada nessa situação (talvez não a melhor) seria fazer
+com que a quantidade de elementos que cada núcleo executaria seria metade dos elementos faltantes.
+Por exemplo, para n = 20 e p = 4, o primeiro nucleo executaria os 10 primeiros, o segundo núcleo executaria os 5 seguintes,
+o terceiro núcleo os  3 seguintes e o último núcleo os 2 restantes. Nessa situação apresentada, considerando um custo inicial
+de 2, os custos totais tomados por cada núcleo seria: 110, 130, 102 e 78.</p>
+
+<p>Considere agora n =5 e p = 2. Os custos seriam: 2 4 6 8 10, respectivamente.
+Seguindo a lógica anterior, o primeiro núcleo executaria os índices: 0 , 1 e 2. E o segundo executaria os índices 3 e 4.
+Os custos totais seriam dessa situação seriam: 12 e 18, respectivamente, para cada núcleo.</p>
+
+<blockquote>
+<p><strong>1.3</strong> Try to write pseudo-code for the tree-structured global sum illustrated in Figure 1.1. Assume the number of cores is a power of two (1, 2, 4, 8, . . . ).
+ Hints: Use a variable divisor to determine whether a core should send its sum or receive and add. The divisor should start with the value 2 and be doubled after each iteration. Also use a variable core difference to determine which core should be partnered with the current core. It should start with the value 1 and also be doubled after each iteration. For example, in the first iteration 0 % divisor = 0 and 1 % divisor = 1, so 0 receives and adds, while 1 sends. Also in the first iteration 0 + core difference = 1 and 1 − core difference = 0, so 0 and 1 are paired in the first iteration.</p>
+</blockquote>
+<div class="highlight"><pre><code class="language-" data-lang="">divisor = 2;
+coreDifference = 1;
+jaEnviou = false;
+for (i = 0; i &lt; log(p) base 2; i++ ) { // 3 iterações para p = 8
+    if (indexCore % divisor == 0) {
+         // receba e some de (indexCore + coreDifference);
+    } else {
+         if ( ! jaEnviou) { // Nao envie caso já tenha enviado numa iteração anterior
+                // envie para (indexCore - coreDiffrence);
+       jaEnviou = true;
+        }
+    }
+   divisor *= 2;
+   coreDifference *= 2;
+}
+</code></pre></div>
+<blockquote>
+<p><strong>1.4</strong> As an alternative to the approach outlined in the preceding problem,
+we can use C’s bitwise operators to implement the tree-structured global sum.
+In order to see how this works, it helps to write down the binary (base 2)
+representation of each of the core ranks, and note the pairings during each stage:[...]
+From the table we see that during the first stage each core is paired with the core whose
+rank differs in the rightmost or first bit. During the second stage cores that continue are
+paired with the core whose rank differs in the second bit, and during the third stage cores
+are paired with the core whose rank differs in the third bit. Thus, if we have a binary value
+bitmask that is 0012 for the first stage, 0102 for the second, and 1002 for the third, we can
+get the rank of the core we’re paired with by “inverting” the bit in our rank that is nonzero in bitmask.
+This can be done using the bitwise exclusive or ∧ operator.
+Implement this algorithm in pseudo-code using the bitwise exclusive or and the left-shift operator.</p>
+</blockquote>
+<div class="highlight"><pre><code class="language-" data-lang="">// indexNucleoPar refere-se ao array de bits que o núcleo atual irá ficar pareado
+if (estagio == 1) {
+   indexNucleoPar[2] = indexAtual[2];
+   indexNucleoPar[1] = indexAtual[1];
+   if (indexAtual[0] ^ 1 ) {
+// isso é verdade qnd o 3 bit do indexAtual for diferente de 1
+      indexNucleoPar[0] = 1;
+   } else {
+      indexNucleoPar[0] = 0;
+   }
+}
+
+if (estagio == 2) {
+   indexNucleoPar[0] = indexAtual[0];
+   indexNucleoPar[2] = indexAtual[2];
+   if (indexAtual[1] ^ 1 ) {
+      // isso é verdade qnd o 2 bit do indexAtual for diferente de 1
+      indexNucleoPar[1] = 1;
+   } else {
+      indexNucleoPar[1] = 0;
+   }
+}
+
+if (estagio == 3) {
+   indexNucleoPar[1] = indexAtual[1];
+   indexNucleoPar[0] = indexAtual[0];
+
+   if (indexAtual[2] ^ 1 ) {
+// isso é verdade qnd o 1 bit do indexAtual for diferente de 1
+      indexNucleoPar[2] = 1;
+   } else {
+      indexNucleoPar[2] = 0;
+   }
+}
+
+</code></pre></div>
+<blockquote>
+<p><strong>1.5</strong> What happens if your pseudo-code in Exercise 1.3 or Exercise 1.4
+is run when the number of cores is not a power of two (e.g., 3, 5, 6, 7)?
+Can you modify the pseudo-code so that it will work correctly regardless of the number of cores?</p>
+</blockquote>
+
+<p>Se o número de núcleos não forem uma potência de 2, eles não conseguirão ser pareados em toda e
+qualquer iteração da soma. Caso o número de núcleos seja 6, por exemplo, os núcleos poderão ser
+pareados na primeira iteração, mas na segunda iteração não, pois 3 não é divisível por 2.
+Uma possível alteração do código em 1.3 que resolveria esta situação seria a seguir:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">divisor = 2;
+coreDifference = 1;
+jaEnviou = false;
+qtdCoresExecucao= // NUMERO TOTAL DE CORES DO SISTEMA;
+// qtdCoresExecucao refere-se a quantidade de núcleos que está em execução em cada iteração
+for (i = 0; i &lt; log(p) base 2; i++ ) { // 3 iterações, para 8 núcleos por exemplo
+
+    if (indexCore % divisor == 0 &amp;&amp; indexCore + 1 != qtdCoresExecucao) {
+        // Recebem as somas parciais aqueles q são múltiplos de potência de 2 e cujos
+        //índices não é o ultimo dos cores em execução
+        // receba e some de (indexCore + coreDifference);
+
+        if (qtdCoresExecucao % 2 != 0 &amp;&amp; indexCore == qtdCoresExecucao - 2) {
+        /* Caso a quantidade de cores que estão em execução nesta iteração não seja
+    múltipla de 2, o último core responsável por receber as somas deverá receber
+    também a soma parcial do core que “sobra”. O índice desse core é
+    qtdCoresExecucao -1.*/
+    // receba e some de (qtdCoresExecucao - 1)
+        }
+
+    } else {
+         if ( ! jaEnviou) { // Nao envie caso já tenha enviado numa iteração anterior
+            if (qtdCoresExecucao % 2 != 0 &amp;&amp; indexCore + 1 == qtdCoresExecucao) {
+          /* Caso a quantidade de cores que estão em execução nesta iteração não
+          seja múltipla de 2 e o core atual for aquele que “sobra” no pareamento,
+          então envie para (indexCore - coreDifference - 1);*/
+                 // envie para (indexCore - coreDiffrence -1);
+            } else {
+          // Caso contrário, execute o algoritmo normalmente como era antes
+                 // envie para (indexCore - coreDiffrence);
+            }
+
+jaEnviou = true;
+         }
+    }
+   divisor *= 2;
+   coreDifference *= 2;
+   qtdCoresExecucao-= 2^i; // O seu valor é reduzido em potência de 2
+}
+</code></pre></div>
+<blockquote>
+<p><strong>1.6</strong> Derive formulas for the number of receives and additions that core 0
+carries out using</p>
+
+<p><strong>a.</strong> the original pseudo-code for a global sum</p>
+</blockquote>
+
+<p>No código original da soma global, o núcleo 0 receberá o resultado de cada cada um dos núcleo e somará cada um deles, logo a quantidade de dados recebidos será igual a quantidade de somas realizadas. Assim, a quantidade total será dada por:
+QtdSomas = (n - 1);
+onde n é o número de elementos que o núcleo irá processar.</p>
+
+<blockquote>
+<p><strong>b.</strong> the tree-structured global sum.</p>
+</blockquote>
+
+<p>Já considerando a soma global em árvore estruturada (considerando número de núcleos sendo uma potência de 2), o núcelo 0 receberá o valor das somas parciais e somará, obtendo o valor total. Portanto a quantidade de números recebidos e adicionados serão iguais no entanto menor do que o do código original. Para dois núcleos, o resultado será 1, para 4 será 2, para 8 será 3, então, isso pode ser determinado pela seguinte fórmula:
+QtdSomas = QtdRecebidos =log2 (p)</p>
+
+<blockquote>
+<p>Make a table showing the numbers of receives and additions carried out
+by core 0 when the two sums are used with 2, 4, 8,..., 1024 cores.</p>
+</blockquote>
+
+<table><thead>
+<tr>
+<th>Qtd Núcleos</th>
+<th style="text-align: center">Soma Global</th>
+<th style="text-align: right">Soma Árvore</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>2</td>
+<td style="text-align: center">1</td>
+<td style="text-align: right">1</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align: center">3</td>
+<td style="text-align: right">2</td>
+</tr>
+<tr>
+<td>8</td>
+<td style="text-align: center">7</td>
+<td style="text-align: right">3</td>
+</tr>
+<tr>
+<td>16</td>
+<td style="text-align: center">15</td>
+<td style="text-align: right">4</td>
+</tr>
+<tr>
+<td>32</td>
+<td style="text-align: center">31</td>
+<td style="text-align: right">5</td>
+</tr>
+<tr>
+<td>64</td>
+<td style="text-align: center">63</td>
+<td style="text-align: right">6</td>
+</tr>
+<tr>
+<td>128</td>
+<td style="text-align: center">127</td>
+<td style="text-align: right">7</td>
+</tr>
+<tr>
+<td>256</td>
+<td style="text-align: center">255</td>
+<td style="text-align: right">8</td>
+</tr>
+<tr>
+<td>512</td>
+<td style="text-align: center">511</td>
+<td style="text-align: right">9</td>
+</tr>
+<tr>
+<td>1025</td>
+<td style="text-align: center">1023</td>
+<td style="text-align: right">10</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p><strong>1.7</strong> The first part of the global sum example—when each core adds its assigned computed values—is usually
+considered to be an example of data-parallelism, while the second part of the first global sum—when the cores send
+their partial sums to the master core, which adds them—could be considered to be an example of task-parallelism.
+What about the second part of the second global sum—when the cores use a tree structure to add their partial sums?
+Is this an example of data- or task-parallelism? Why?</p>
+</blockquote>
+
+<p>Seria um exemplo de ambos conceitos, porque os núcleos compartilham tanto o dado compartilhado (suas somas parciais)
+quanto a tarefa em si, isto é, a tarefa de realizar a soma, a qual cada núcleo fica responsável por realizar parte dela.</p>
+
+<blockquote>
+<p><strong>1.8</strong> Suppose the faculty are going to have a party for the students in the department.</p>
+
+<p><strong>a.</strong> Identify tasks that can be assigned to the faculty members that will allow them to use
+ task-parallelism when they prepare for the party. Work out a schedule that shows when the various tasks can be performed.</p>
+</blockquote>
+
+<p><img src="/assets/pcd/img1.8.jpg" alt="Imagem1.8"></p>
+
+<p>As tarefas de preparar o local, preparar a bebida e comida podem ser realizadas de forma paralela.
+ Quando a bebida e a comida estão prontas, são trazidas até o local.</p>
+
+<blockquote>
+<p><strong>b.</strong> We might hope that one of the tasks in the preceding part is cleaning
+the house where the party will be held. How can we use data-parallelism to partition
+the work of cleaning the house among the faculty?</p>
+</blockquote>
+
+<p>O dado compartilhado poderia ser o local ou os materiais (talheres, pratos e copos)
+que estariam sendo utilizados tanto pelo pessoal da festa, quanto pelos da limpeza.</p>
+
+<blockquote>
+<p><strong>c.</strong> c. Use a combination of task- and data-parallelism to prepare for the party.
+ (If there’s too much work for the faculty, you can use TAs to pick up the slack.)</p>
+</blockquote>
+
+<p>As duas tarefas seriam o pessoal da festa estaria requisitando a utilização dos materiais,
+e a outra tarefa paralela estaria sendo responsável por pegar aqueles materiais que já
+foram usados e limpá-los. Sendo que as duas tarefas não poderiam estar compartilhando
+o mesmo recurso (devem solicitar lock).</p>
+
+<blockquote>
+<p><strong>1.9</strong> Write an essay describing a research problem in your major that would benefit
+from the use of parallel computing. Provide a rough outline of how parallelism would be used.
+Would you use task- or data-parallelism?</p>
+</blockquote>
+
+<p>Um exemplo de problema que seria beneficiado com a utilização de paralelismo seria a de
+movimentação de dinheiro em uma conta bancária. O tipo de paralelismo nenessário nesse problema
+seria o de data. Por exemplo, caso haja a execução de duas transações ao mesmo tempo como depósito e
+saque, o acesso ao saldo atual do usuário deveria ser sincronizado. Por exemplo:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">float saldo;
+    void saque(float saque) {
+       float saldoAtual = saldo;
+       saldo = saldoAtual - saque;
+    }
+
+    void deposito(float deposito) {
+       float saldoAtual = saldo;
+       saldo = saldoAtual + deposito;
+    }
+</code></pre></div>
+<p>O acesso ao valor da variável saldo deveria ser realizado de forma sincronizada.
+No exemplo acima, caso as duas funções fossem executadas ao mesmo tempo, poderia ocorrer a
+situação em que o saldoAtual em ‘deposito’ teria o valor antes de ser executado o saque. Assim,
+o valor do saldo que seria armazenado seria incorreto.</p>
+</span>
+
+      </div>
+      <div class="anuncio">
+    
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- Dudevictor github -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-9976909752880073"
+         data-ad-slot="9516328345"
+         data-ad-format="auto"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    
+</div>
+      <div class="content-panel feedback">
+        Gostou desta página? Compartilhe ou deixe um comentário abaixo!<br />
+        
+        <div class="share">
+          <!-- Go to www.addthis.com/dashboard to customize your tools -->
+          <div class="addthis_sharing_toolbox"></div>
+        </div>
+        
+      </div>
+
+      
+      <div class="content-panel comments">
+        <div id="disqus_thread">
+          <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+          <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+      </div>
+      
+
+
+      <div class="content-panel related col-md-12">
+        
+        
+        <div class="related-header">
+          <a href=" /projects/processamento-digital-imagens/
+          ">Páginas Sugeridas</a>
+        </div>
+        <div class="title">
+          <a href=" /projects/processamento-digital-imagens/
+          ">Processamento Digital de Imagens</a>
+
+        </div>
+        <div class="excerpt">
+          
+          <p>Algoritmos de processamento e tratamento de imagens com OpenCV</p>
+
+          
+          <br/><a href=" /projects/processamento-digital-imagens/
+          ">Continue Lendo</a>
+        </div>
+        
+      </div>
+
+    </div>
+
+    <div class="anuncio-lateral pull-right">
+    <div class="conteudo-anuncio-lateral">
+        
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- Lateral Responsivo -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-9976909752880073"
+             data-ad-slot="1336169546"
+             data-ad-format="auto"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        
+    </div>
+</div>
+
+  </div>
+
+
+
+</div>
+
+
+<script type="text/javascript">
+/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+function disqus_config() { this.experiment.enable_scroll_container = true; }
+var disqus_shortname = "dudevictorgithub"; // required: replace example with your forum shortname
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function() {
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+
+
+      </div>
+    </div>
+
+    <div class="footer clearfix">
+    <div class="col-md-6">
+        Copyright © 2016 by <a href="http://github.com/dudevictor">dudevictor</a>.
+        All rights reserved.<br>Theme by <a href="https://twitter.com/_JacobTomlinson">Jacob
+        Tomlinson</a>
+    </div>
+    <div class="col-md-6">
+        &lt;/&gt; on <a href="https://github.com/dudevictor/dudevictor.github.io">Github</a> &nbsp;<i class="fa fa-github-alt"></i>
+    </div>
+</div>
+
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/jquery.mmenu.all.min.js"></script>
+<script src="/js/highlight.min.js"></script>
+
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&locale=br" type="text/javascript"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  "HTML-CSS": { linebreaks: { automatic: true, width: "90% container" } },
+  "SVG": { linebreaks: { automatic: true, width: "90% container" } }
+});
+</script>
+
+
+<script>hljs.initHighlightingOnLoad();</script>
+<script type="text/javascript">
+   $(document).ready(function() {
+      var API = $("#my-menu").mmenu({
+          counters		: true,
+          dividers		: {
+              fixed 			: true
+          },
+          navbar 			: {
+              title			: ''
+          },
+          navbars			: [
+              {
+                  position	: 'top',
+                  content : ['<span>José Victor Alves de Souza</span>']
+              },
+              {
+                  position	: 'top'
+              },
+              {
+                  position	: 'bottom',
+                  content 	: ["<div class='language-links'><a class='active' href='/projects/programacao-concorrente/'>pt-BR</a><a  href='/en/projects/programacao-concorrente/'>en</a></div>"]
+              }
+          ]
+      }).data( 'mmenu' );
+
+       API.bind( "closed", function() {
+          $(".menu-button").show();
+          $("#at4-share, #at-share-dock").each(function() {
+              $(this).removeClass("hide");
+          });
+      });
+
+       $(".menu-button").click(function (e) {
+           e.preventDefault();
+           API.open();
+           $(".menu-button").hide();
+           $("#at4-share, #at-share-dock").each(function () {
+               $(this).removeClass("at4-show").addClass("hide");
+           });
+
+       });
+   });
+</script>
+
+    </body>
+</html>

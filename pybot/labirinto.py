@@ -1,20 +1,18 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # -*- mode: python -*-
-
+from pybot import *
 
 # Configuração de caracteres do mapa
 parede     = '#'
 corredor   = '.'
-percorrido = '='
-errado     = 'x'
 solucao    = '@'
 entrada    = 'R'
 saida      = 'S'
 queijo     = 'Q'
 
 direcoes = [ 
-             [1,0],
+             [1,0], 
              [-1,0],
              [0,1],
              [0,-1]
@@ -23,10 +21,11 @@ direcoes = [
 class Labirinto( object ):
     def __init__( self ):
         self.mapa           = None
+        self.mapaInicial    = None
         self.entrada        = None
         self.saida          = None
         self.custoTot       = 0
-        self.quijos         = 0
+        self.queijo         = 0
         self.historico      = None
         self.listaPercorica = {}
         self.listaAcaminhar = []
@@ -45,6 +44,7 @@ class Labirinto( object ):
     def le_mapa( self, texto ):
         """Lê um mapa, este deve ter uma entrada e uma saída."""
         self.mapa = texto.split( '\n' )
+        self.mapaInicial = texto.split( '\n' )
 
         for i, l in enumerate( self.mapa ):
             # encontra entrada:
@@ -59,6 +59,7 @@ class Labirinto( object ):
             # converte string para lista
             self.mapa[ i ] = list( l )
 
+            self.mapaInicial[ i ] = list( l )
         if not self.entrada:
             raise ValueError( "O mapa não possui uma entrada!" )
         if not self.saida:
@@ -76,17 +77,12 @@ class Labirinto( object ):
         f.close()
     # le_mapa_arquivo()
 
-    # def resolve( self ):
-        """Resolve o labirinto, tenta encontrar a saída.
-
-        Se a saída foi encontrada, retorna True, caso contrário False.
-        """
 
     def posicao_valida(self, linha, coluna ):
-        "Função utilizada para conferir se a posição está dentro do mapa"
+        # Função utilizada para conferir se a posição está dentro do mapa
         if linha > len( self.mapa ) or \
                coluna >= len( self.mapa[ linha ] ):
-            "Posição inválida, sai fora do mapa"
+            # Posição inválida, sai fora do mapa
             return False
         else:
             return True
@@ -121,7 +117,7 @@ class Labirinto( object ):
                 lista.append({'x':caminho['x'], 'y':caminho['y'],'tipo':caminho['tipo']})
                 self.mapa[caminho['y']][caminho['x']] = solucao
                 if(caminho['tipo'] == queijo):
-                    self.quijos = self.quijos + 1 
+                    self.queijo = self.queijo + 1 
                 caminho = caminho['pai']
 
             lista.reverse()
@@ -129,7 +125,7 @@ class Labirinto( object ):
             for item in (lista):
                 self.passos.append((item['y'], item['x']))
 
-            return lista, self.quijos
+            return True
         else:
             
             # adiciona na lisra que já foi passado por essa posição
@@ -151,9 +147,7 @@ class Labirinto( object ):
                         itemValido['pai'] = itemLista
                         itemValido['tipo'] = tipo
                         self.listaAcaminhar.append(itemValido)
-        # encontra_saida()
-        
-
+    
         if (len(self.listaAcaminhar)>0):
             # achar o menor a caminha para saber onde tem que ir agora
             itemMenor = reduce(self.calcularMenorCusto, self.listaAcaminhar, self.listaAcaminhar[0])
@@ -163,9 +157,8 @@ class Labirinto( object ):
   
             return self.encontra_saida(itemMenor)
         else:
-            print "Nenhuma solução"
             return False
-    # resolve()
+    # encontra_saida()
 # Labirinto
 
 
@@ -175,11 +168,53 @@ import sys
 l = Labirinto()
 
 l.le_mapa_arquivo(sys.argv[1])
-l.encontra_saida(l.entrada)
-# print "\nResultado:\n"
-# print l
-# print "\nQuijos encontrados:\n", l.quijos
-# print "\nPassos executados:"
-# for item in l.passos: print (item)
-# print l.altura
-# print l.largura
+resultado = l.encontra_saida(l.entrada)
+
+if(resultado):
+    resultadoString = ''
+    
+    resultadoString += "@ representa o caminho percorrido\n"
+    resultadoString += "Resultado:\n"
+    resultadoString += str(l )
+    resultadoString += "\n\nQueijos encontrados:\n"
+    resultadoString += str(l.queijo)
+    resultadoString += "\n\nPassos executados:"
+    for item in l.passos: 
+        resultadoString += "\n"
+        resultadoString += str(item)
+
+    arq = open("resultado.txt", "w")
+    arq.write( resultadoString)
+    arq.close()
+
+    mundo = Mundo(altura=l.altura, largura=l.largura, espera=True)
+
+    mundo.mostra_msg(0,0,'Clique para comecar')
+
+    for i, n in enumerate( l.mapaInicial ): 
+        for u, j in enumerate( n ):
+            if j == parede:
+                ParedeFloyd(u+1, i+1)
+            if j == queijo:
+                Sabre(u+1, i+1)
+            if j == entrada:
+                vader = Vader(u+1, i+1)
+            if j == saida:
+                portal = Portal(u+1, i+1)
+    
+    for passo in l.passos:
+        vader.move_para(passo[1]+1, passo[0]+1)
+        # meuSleep(0.5)
+        espera()
+
+    # espera()
+    portal.remove()
+    # vader.remove()
+    # mundo.mostra_msg(0,0,'O resultado se encontra em um txt')
+    
+    for i, n in enumerate( l.mapa ): 
+        for u, j in enumerate( n ):
+            if j == solucao:
+                Rastro(u+1, i+1)
+
+    vader.explodir('Fim de jogo')

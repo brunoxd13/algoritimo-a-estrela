@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # -*- mode: python -*-
-
+from pybot import *
 
 # Configuração de caracteres do mapa
 parede     = '#'
@@ -25,14 +25,10 @@ class Labirinto( object ):
         self.mapa           = None
         self.entrada        = None
         self.saida          = None
-        self.custoTot       = 0
         self.quijos         = 0
-        self.historico      = None
         self.listaPercorica = {}
         self.listaAcaminhar = []
-        self.passos         = []
-        self.altura         = 0 
-        self.largura        = 0 
+        self.passos			= []
     # __init__()
 
     def __str__( self ):
@@ -63,9 +59,6 @@ class Labirinto( object ):
             raise ValueError( "O mapa não possui uma entrada!" )
         if not self.saida:
             raise ValueError( "O mapa não possui uma saída!" )
-
-        self.altura = len(self.mapa)
-        self.largura = len(self.mapa[0])
     # le_mapa()
 
 
@@ -126,8 +119,7 @@ class Labirinto( object ):
 
             lista.reverse()
 
-            for item in (lista):
-                self.passos.append((item['y'], item['x']))
+            self.passos = lista 
 
             return lista, self.quijos
         else:
@@ -155,7 +147,7 @@ class Labirinto( object ):
         
 
         if (len(self.listaAcaminhar)>0):
-            # achar o menor a caminha para saber onde tem que ir agora
+            # achar o menor a caminho para saber onde tem que ir agora
             itemMenor = reduce(self.calcularMenorCusto, self.listaAcaminhar, self.listaAcaminhar[0])
             
             # remove o item menor pois é por ele que vamos seguir e não devemos ir por onde já fomos
@@ -163,7 +155,7 @@ class Labirinto( object ):
   
             return self.encontra_saida(itemMenor)
         else:
-            print "Nenhuma solução"
+            print ("Nenhuma solução")
             return False
     # resolve()
 # Labirinto
@@ -171,15 +163,24 @@ class Labirinto( object ):
 
 # Exemplo de uso:
 import sys
-
 l = Labirinto()
 
-l.le_mapa_arquivo(sys.argv[1])
-l.encontra_saida(l.entrada)
-# print "\nResultado:\n"
-# print l
-# print "\nQuijos encontrados:\n", l.quijos
-# print "\nPassos executados:"
-# for item in l.passos: print (item)
-# print l.altura
-# print l.largura
+l.le_mapa(
+    """#########
+#R..Q..Q#
+#.#.#Q#.#
+#...#.#.#
+#####.#.#
+#.Q.Q.#.#
+#.#####.#
+#..Q..Q.#
+#####S###""" )
+
+print (l)
+print ("achou?",l.encontra_saida(l.entrada))
+print (l)
+print ("quijos encontrados:", l.quijos)
+#print "Custo Total:", l.custoTot
+#print historico[2]
+
+mundo = Mundo(altura=10, largura=8, espera=True)

@@ -1,11 +1,13 @@
-﻿# algoritimo-a-estrela
+﻿# Algoritimo A Estrela(A*)
 
 
 O trabalho consiste na implementação de um agente capaz de guiar um rato através de um labirinto utilizando o Algoritmo busca heurística A* para planejar o caminho.
 
 O rato percorre o labirinto em busca da saída, e no decorrer do caminho encontra e come alguns pedaços de queijo. O rato anda somente uma casa por vez, podendo se deslocar somente à direita, esquerda, para cima e para baixo, nunca na diagonal, desde que não tenha parede no caminho. O labirinto é codi cado como uma matriz bidimensional de caracteres, na qual, as casas (células da matriz) livres são marcadas com o caractere '.' (ponto  nal), as paredes, com o caractere '#' (cerquilha), a posição de saída com o caractere 'S' (maiúsculo), as posições com queijo com o caractere 'Q' (maiúsculo), a posição inicial do rato, é indicada pelo caractere 'R' (maiúsculo). O labirinto deve ser todo cercado por paredes (caractere '#'), exceto na saída ('S').
 
-Os labirintos serão armazenados em arquivos de extensão .txt e podem ter tamanhos diferentes. Esses arquivos, quando lidos, devem ser armazenados em matrizes. Cada arquivo representa somente um labirinto e está estrutudado da seguinte forma: a primeira linha do arquivo é composta de dois números que contém a quantidade de colunas e de linhas da matriz, respectivamente; as linhas seguintes representam os elementos que de nem o labirinto. Observação: o caractere de terminação de linha '\n' deve ser ignorado.
+Os labirintos serão armazenados em arquivos de extensão .txt e podem ter tamanhos diferentes. Esses arquivos, quando lidos, devem ser armazenados em matrizes. Cada arquivo representa somente um labirinto e está estrutudado da seguinte forma: a primeira linha do arquivo é composta de dois números que contém a quantidade de colunas e de linhas da matriz, respectivamente; as linhas seguintes representam os elementos que de nem o labirinto. 
+
+Observação: o caractere de terminação de linha '\n' deve ser ignorado.
 
 A seguir são apresentados dois exemplos de arquivos de entrada:
 
@@ -32,7 +34,9 @@ A seguir são apresentados dois exemplos de arquivos de entrada:
 	########################################
 
 
-O presente trabalho tem valor de 20 pontos na média  nal. O que deve ser feito:
+O presente trabalho tem valor de 20 pontos na média  final. 
+
+O que deve ser feito:
 
 • Implementar um programa em uma linguagem de programação a escolha do grupo, capaz de fazer um rato percorrer um labirinto e encontrar a saída;
 
@@ -75,7 +79,9 @@ Forma de avaliação
 
 • O trabalho será avaliado a partir dos seguintes itens:
 
-  O trabalho atendeu a todos os requisitos especi cados anteriormente;   O algoritmo de busca foi implementado de forma correta
+  O trabalho atendeu a todos os requisitos especi cados anteriormente;   
+  
+  O algoritmo de busca foi implementado de forma correta;
   
   O código foi devidamente organizado e comentado;
   

@@ -2,91 +2,76 @@
 # -*- coding: utf-8 -*-
 # -*- mode: python -*-
 
-
 # Configuração de caracteres do mapa
-parede     = '#'
-corredor   = '.'
-percorrido = '='
-errado     = 'x'
-solucao    = '@'
-entrada    = 'R'
-saida      = 'S'
-queijo     = 'Q'
+parede      = '#'
+corredor    = '.'
+solucao     = '@'
+entrada     = 'R'
+saida       = 'S'
+queijo      = 'Q'
 
-direcoes = [ 
-             [1,0],
-             [-1,0],
-             [0,1],
-             [0,-1]
-            ]
+direcoes = [
+    [1, 0],
+    [-1, 0],
+    [0, 1],
+    [0, -1]
+]
 
-class Labirinto( object ):
-    def __init__( self ):
-        self.mapa           = None
-        self.entrada        = None
-        self.saida          = None
-        self.custoTot       = 0
-        self.quijos         = 0
-        self.historico      = None
+class Labirinto(object):
+    def __init__(self):
+        self.mapa = None
+        self.entrada = None
+        self.saida = None
+        self.queijo = 0
         self.listaPercorica = {}
         self.listaAcaminhar = []
-        self.passos         = []
-        self.altura         = 0 
-        self.largura        = 0 
+        self.passos = []
     # __init__()
 
-    def __str__( self ):
+    def __str__(self):
         m = []
         for l in self.mapa:
-            m.append( ''.join( l ) )
-        return '\n'.join( m )
+            m.append(''.join(l))
+        return '\n'.join(m)
     # __str__()
 
-    def le_mapa( self, texto ):
-        """Lê um mapa, este deve ter uma entrada e uma saída."""
-        self.mapa = texto.split( '\n' )
+    def le_mapa(self, texto):
+        # Lê um mapa, este deve ter uma entrada e uma saída.
+        self.mapa = texto.split('\n')
 
-        for i, l in enumerate( self.mapa ):
+        for i, l in enumerate(self.mapa):
             # encontra entrada:
-            p = l.find( entrada )
+            p = l.find(entrada)
             if p >= 0:
-                self.entrada = {'x':p, 'y':i, 'custo':0, 'pai':None, 'tipo':'R'}
+                self.entrada = {'x': p, 'y': i, 'custo': 0, 'pai': None, 'tipo': 'R'}
             # encontra saida:
-            p = l.find( saida )
+            p = l.find(saida)
             if p >= 0:
-                self.saida = {'x':p, 'y':i}
+                self.saida = {'x': p, 'y': i}
 
             # converte string para lista
-            self.mapa[ i ] = list( l )
+            self.mapa[i] = list(l)
 
         if not self.entrada:
-            raise ValueError( "O mapa não possui uma entrada!" )
+            raise ValueError("O mapa não possui uma entrada!")
         if not self.saida:
-            raise ValueError( "O mapa não possui uma saída!" )
-
-        self.altura = len(self.mapa)
-        self.largura = len(self.mapa[0])
+            raise ValueError("O mapa não possui uma saída!")
     # le_mapa()
 
 
-    def le_mapa_arquivo( self, arquivo ):
-        """Lê um mapa de um arquivo"""
-        f = open( arquivo )
-        self.le_mapa( f.read() )
+    def le_mapa_arquivo(self, arquivo):
+        # Lê um mapa de um arquivo
+        f = open(arquivo)
+        self.le_mapa(f.read())
         f.close()
     # le_mapa_arquivo()
 
-    # def resolve( self ):
-        """Resolve o labirinto, tenta encontrar a saída.
 
-        Se a saída foi encontrada, retorna True, caso contrário False.
-        """
-
-    def posicao_valida(self, linha, coluna ):
-        "Função utilizada para conferir se a posição está dentro do mapa"
-        if linha > len( self.mapa ) or \
-               coluna >= len( self.mapa[ linha ] ):
-            "Posição inválida, sai fora do mapa"
+    def posicao_valida(self, linha, coluna):
+        # Função utilizada para conferir se a posição está dentro do mapa
+        if linha > len(self.mapa) or \
+                        coluna >= len(self.mapa[linha]):
+            # Posição inválida, sai fora do mapa
             return False
         else:
             return True
@@ -95,21 +80,21 @@ class Labirinto( object ):
     def calcularHeuristica(self, itemLista):
         itemLista['heuristica'] = abs((itemLista['y'] - self.saida['y'])) + abs((itemLista['x'] - self.saida['x']))
     # calcularHeuristica
-       
+
     # calcula o menor custo total, se for igual pega pela heuristica
     def calcularMenorCusto(self, item1, item2):
-        if(item1['total'] < item2['total']):
+        if (item1['total'] < item2['total']):
             return item1
-        elif(item2['total'] < item1['total']):
+        elif (item2['total'] < item1['total']):
             return item2
         else:
-            if(item1['heuristica'] < item2['heuristica']):
+            if (item1['heuristica'] < item2['heuristica']):
                 return item1
             else:
                 return item2
     # calcularMenorCusto
 
-    def encontra_saida( self, itemLista ):
+    def encontra_saida(self, itemLista):
         # Função recursiva para encontrar a saída.
         if itemLista['x'] == self.saida['x'] and itemLista['y'] == self.saida['y']:
             # Caso base da recursão, estamos em cima da saída
@@ -117,11 +102,11 @@ class Labirinto( object ):
             caminho = itemLista
             lista = []
 
-            while (caminho!=None):
-                lista.append({'x':caminho['x'], 'y':caminho['y'],'tipo':caminho['tipo']})
+            while (caminho != None):
+                lista.append({'x': caminho['x'], 'y': caminho['y'], 'tipo': caminho['tipo']})
                 self.mapa[caminho['y']][caminho['x']] = solucao
-                if(caminho['tipo'] == queijo):
-                    self.quijos = self.quijos + 1 
+                if (caminho['tipo'] == queijo):
+                    self.queijo = self.queijo + 1
                 caminho = caminho['pai']
 
             lista.reverse()
@@ -129,19 +114,20 @@ class Labirinto( object ):
             for item in (lista):
                 self.passos.append((item['y'], item['x']))
 
-            return lista, self.quijos
+            return True
         else:
-            
+
             # adiciona na lisra que já foi passado por essa posição
-            self.listaPercorica[str(itemLista['y'])+','+str(itemLista['x'])] = True
-            
+            self.listaPercorica[str(itemLista['y']) + ',' + str(itemLista['x'])] = True
+
             # percore todas as direcoes e verifica se a posicao já foi visitada
             # verifica se a posiçao está dentro do mapa, verifica se é um cimnho que pode seguir
             for direcao in direcoes:
-                if self.posicao_valida(direcao[0]+itemLista['y'], direcao[1]+itemLista['x']):
-                    tipo = self.mapa[direcao[0]+itemLista['y']][direcao[1]+itemLista['x']]
+                if self.posicao_valida(direcao[0] + itemLista['y'], direcao[1] + itemLista['x']):
+                    tipo = self.mapa[direcao[0] + itemLista['y']][direcao[1] + itemLista['x']]
                     if tipo in (corredor, saida, queijo) and \
-                    not(self.listaPercorica.get(str(itemLista['y']+direcao[0])+','+str(itemLista['x']+direcao[1]))):
+                            not (self.listaPercorica.get(
+                                        str(itemLista['y'] + direcao[0]) + ',' + str(itemLista['x'] + direcao[1]))):
                         itemValido = {}
                         itemValido['y'] = itemLista['y'] + direcao[0]
                         itemValido['x'] = itemLista['x'] + direcao[1]
@@ -151,21 +137,18 @@ class Labirinto( object ):
                         itemValido['pai'] = itemLista
                         itemValido['tipo'] = tipo
                         self.listaAcaminhar.append(itemValido)
-        # encontra_saida()
-        
 
-        if (len(self.listaAcaminhar)>0):
+        if (len(self.listaAcaminhar) > 0):
             # achar o menor a caminha para saber onde tem que ir agora
             itemMenor = reduce(self.calcularMenorCusto, self.listaAcaminhar, self.listaAcaminhar[0])
-            
+
             # remove o item menor pois é por ele que vamos seguir e não devemos ir por onde já fomos
             self.listaAcaminhar.remove(itemMenor)
-  
+
             return self.encontra_saida(itemMenor)
         else:
-            print "Nenhuma solução"
             return False
-    # resolve()
+     # encontra_saida()
 # Labirinto
 
 
@@ -175,12 +158,24 @@ import sys
 l = Labirinto()
 
 l.le_mapa_arquivo(sys.argv[1])
-l.encontra_saida(l.entrada)
+resultado = l.encontra_saida(l.entrada)
 
-# print "\nResultado:\n"
-# print l
-# print "\nQuijos encontrados:\n", l.quijos
-# print "\nPassos executados:"
-# for item in l.passos: print (item)
-# print l.altura
-# print l.largura
+if (resultado):
+    resultadoString = ''
+
+    resultadoString += "@ representa o caminho percorrido\n"
+    resultadoString += "Resultado:\n"
+    resultadoString += str(l)
+    resultadoString += "\n\nQueijos encontrados:\n"
+    resultadoString += str(l.queijo)
+    resultadoString += "\n\nPassos executados:"
+    for item in l.passos:
+        resultadoString += "\n"
+        resultadoString += str(item)
+
+    arq = open("resultado.txt", "w")
+    arq.write(resultadoString)
+    arq.close()
+    print "Resultado do programa se encontra na pasta do projeto com o nome resultado.txt"
+else:
+    print "Sem nenhum resultado"

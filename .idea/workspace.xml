@@ -2,116 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ecc12b6a-078f-488a-b8b9-5adffea84009" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/.idea/.name" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/.idea/dictionaries/Carlos.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/.idea/encodings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/.idea/inspectionProfiles/Project_Default.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/.idea/inspectionProfiles/profiles_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/.idea/pybot.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/.idea/scopes/scope_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/NOME DO AQUIVO.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/00.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/01.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/02.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/03.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/04.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/05.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/06.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/11.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/12.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/13.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/14.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/15.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/16.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/22.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/23.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/24.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/25.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/26.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/33.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/34.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/35.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/36.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/44.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/45.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/46.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/55.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/56.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/66.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/bispobranco.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/bispopreto.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/brick-wall(1).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/brick-wall.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/cavalobranco.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/cavalopreto.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/clone-blue.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/clone-red.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/clone-yellow.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/damabranca.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/damapreta.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/estrela-morte(1).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/estrela-morte.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/explosion.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/fantasma1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/fantasma2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/fantasma3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/fantasma4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/fundo-verde.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/lucon.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/moedas.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/nomes.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/parede.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/peaobranco.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/peaopreto.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/portal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/r2d2-small.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/r2d2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/rastro.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/reibranco.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/reipreto.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/sabre.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/torrebranca.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/torrepreta.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/trooper-small.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/trooper.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/vader(1).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/vader-small.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/dados/vader.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/fonts/DejaVuSans-Bold.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/fonts/DejaVuSans-BoldOblique.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/fonts/DejaVuSans-ExtraLight.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/fonts/DejaVuSans-Oblique.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/fonts/DejaVuSans.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/fonts/DejaVuSansCondensed-Bold.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/fonts/DejaVuSansCondensed-BoldOblique.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/fonts/DejaVuSansCondensed-Oblique.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/fonts/DejaVuSansCondensed.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/fonts/DejaVuSansMono-Bold.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/fonts/DejaVuSansMono-BoldOblique.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/fonts/DejaVuSansMono-Oblique.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/fonts/DejaVuSansMono.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/fonts/DejaVuSerif-Bold.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/fonts/DejaVuSerif-BoldItalic.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/fonts/DejaVuSerif-Italic.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/fonts/DejaVuSerif.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/fonts/DejaVuSerifCondensed-Bold.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/fonts/DejaVuSerifCondensed-BoldItalic.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/fonts/DejaVuSerifCondensed-Italic.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/fonts/DejaVuSerifCondensed.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/imagens/parede.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/labirinto.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/labirinto.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/labirinto2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/labirinto3.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/printer.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/pybot.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/resultado.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pybot/teste.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/teste.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/algoritimo-a*.py" afterPath="$PROJECT_DIR$/algoritimo-a*.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -127,8 +18,8 @@
       <file leaf-file-name="algoritimo-a*.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/algoritimo-a*.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="178" column="0" lean-forward="false" selection-start-line="178" selection-start-column="0" selection-end-line="178" selection-end-column="0" />
+            <state relative-caret-position="22">
+              <caret line="150" column="4" lean-forward="false" selection-start-line="150" selection-start-column="4" selection-end-line="150" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -140,6 +31,7 @@
     <findStrings>
       <find>passo</find>
       <find>passos</find>
+      <find>mapaInicial</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -148,8 +40,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/algoritimo-a*.py" />
         <option value="$PROJECT_DIR$/pybot/labirinto.py" />
+        <option value="$PROJECT_DIR$/algoritimo-a*.py" />
       </list>
     </option>
   </component>
@@ -470,8 +362,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/algoritimo-a*.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="178" column="0" lean-forward="false" selection-start-line="178" selection-start-column="0" selection-end-line="178" selection-end-column="0" />
+        <state relative-caret-position="22">
+          <caret line="150" column="4" lean-forward="false" selection-start-line="150" selection-start-column="4" selection-end-line="150" selection-end-column="4" />
           <folding />
         </state>
       </provider>

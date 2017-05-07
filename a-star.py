@@ -157,7 +157,11 @@ import sys
 
 l = Labirinto()
 
+if len(sys.argv) <= 1:
+    raise ValueError("O programa precisa de um arquivo de entrada como parametro!")
+
 l.le_mapa_arquivo(sys.argv[1])
+
 resultado = l.encontra_saida(l.entrada)
 
 if (resultado):

@@ -176,6 +176,7 @@ l = Labirinto()
 
 l.le_mapa_arquivo(sys.argv[1])
 l.encontra_saida(l.entrada)
+
 # print "\nResultado:\n"
 # print l
 # print "\nQuijos encontrados:\n", l.quijos

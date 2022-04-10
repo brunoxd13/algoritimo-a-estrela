@@ -2,6 +2,9 @@
 # -*- coding: utf-8 -*-
 # -*- mode: python -*-
 
+from functools import reduce
+
+
 # Configuração de caracteres do mapa
 parede      = '#'
 corredor    = '.'
@@ -180,6 +183,6 @@ if (resultado):
     arq = open("resultado.txt", "w")
     arq.write(resultadoString)
     arq.close()
-    print "Resultado do programa se encontra na pasta do projeto com o nome resultado.txt"
+    print("Resultado do programa se encontra na pasta do projeto com o nome resultado.txt")
 else:
-    print "Sem nenhum resultado"
+    print("Sem nenhum resultado")

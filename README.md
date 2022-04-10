@@ -1,40 +1,44 @@
 ﻿# Algoritimo A Estrela(A*)
 
-
 O trabalho consiste na implementação de um agente capaz de guiar um rato através de um labirinto utilizando o Algoritmo busca heurística A* para planejar o caminho.
 
 O rato percorre o labirinto em busca da saída, e no decorrer do caminho encontra e come alguns pedaços de queijo. O rato anda somente uma casa por vez, podendo se deslocar somente à direita, esquerda, para cima e para baixo, nunca na diagonal, desde que não tenha parede no caminho. O labirinto é codi cado como uma matriz bidimensional de caracteres, na qual, as casas (células da matriz) livres são marcadas com o caractere '.' (ponto  nal), as paredes, com o caractere '#' (cerquilha), a posição de saída com o caractere 'S' (maiúsculo), as posições com queijo com o caractere 'Q' (maiúsculo), a posição inicial do rato, é indicada pelo caractere 'R' (maiúsculo). O labirinto deve ser todo cercado por paredes (caractere '#'), exceto na saída ('S').
 
-Os labirintos serão armazenados em arquivos de extensão .txt e podem ter tamanhos diferentes. Esses arquivos, quando lidos, devem ser armazenados em matrizes. Cada arquivo representa somente um labirinto e está estrutudado da seguinte forma: a primeira linha do arquivo é composta de dois números que contém a quantidade de colunas e de linhas da matriz, respectivamente; as linhas seguintes representam os elementos que de nem o labirinto. 
+Os labirintos serão armazenados em arquivos de extensão .txt e podem ter tamanhos diferentes. Esses arquivos, quando lidos, devem ser armazenados em matrizes. Cada arquivo representa somente um labirinto e está estrutudado da seguinte forma: a primeira linha do arquivo é composta de dois números que contém a quantidade de colunas e de linhas da matriz, respectivamente; as linhas seguintes representam os elementos que de nem o labirinto.
 
 Observação: o caractere de terminação de linha '\n' deve ser ignorado.
 
 A seguir são apresentados dois exemplos de arquivos de entrada:
 
-	5 5 
-	##### 
-	#R.Q# 
-	###.# 
-	SQ.Q# 
-	#####
+5 5
 
-	40 13
-	########################################
-	#R..............Q...........#...#......#
-	#.#.#.#.#.##.#.#.######.#.#...#.#.#.##.#
-	#.#.#####.##.#.#......#.#.#.#..........S
-	#.#...#.#.####.#.####.......##.#.#.###.#
-	#.######.....##.#......####.##.#.#.#.#.#
-	#.############.#.##########.##.#.###.#.#
-	#.#............Q..........#.....Q......#
-	#.##.##.#.#.#.#.#.#.#.#.#.#.###.#.#.##.#
-	#.#...#...#....#....#.....#.#.#...#.##.#
-	#.#.#######################.#.###.####.#
-	#.............#Q......#.....#..........#
-	########################################
+```text
+##### 
+#R.Q# 
+###.# 
+SQ.Q# 
+#####
+```
 
+40 13
 
-O presente trabalho tem valor de 20 pontos na média  final. 
+```text
+########################################
+#R..............Q...........#...#......#
+#.#.#.#.#.##.#.#.######.#.#...#.#.#.##.#
+#.#.#####.##.#.#......#.#.#.#..........S
+#.#...#.#.####.#.####.......##.#.#.###.#
+#.######.....##.#......####.##.#.#.#.#.#
+#.############.#.##########.##.#.###.#.#
+#.#............Q..........#.....Q......#
+#.##.##.#.#.#.#.#.#.#.#.#.#.###.#.#.##.#
+#.#...#...#....#....#.....#.#.#...#.##.#
+#.#.#######################.#.###.####.#
+#.............#Q......#.....#..........#
+########################################
+```
+
+O presente trabalho tem valor de 20 pontos na média  final.
 
 O que deve ser feito:
 
@@ -49,14 +53,17 @@ O que deve ser feito:
   
 • Exemplo de saída após execução do primeiro exemplo de entrada:
 
-    7 passos no total 11
-    12
-    13
-    23
-    33
-    32
-    31
-    3 queijos encontrados
+```
+7 passos no total 11
+12
+13
+23
+33
+32
+31
+3 queijos encontrados
+```
+
 • Informações importantes:
 
   O agente obrigatoriamente deve utilizar o algoritmo de busca especi cado para encontrar o
@@ -68,7 +75,7 @@ bem simples. Podendo até mesmo ser uma matriz desenhada e atualizada no consol
   O trabalho pode ser desenvolvido individualmente, ou em grupos de até 3 pessoas;
   
   Se necessário, será feita a prova de autoria, na qual os membros do grupo serão questionados
-individualmente acerca da implementação. 
+individualmente acerca da implementação.
 
 Se for detectado que um aluno não contribuiu para
 o desenvolvimento do trabalho, este sofrerá penalização na nota  nal.
@@ -79,7 +86,7 @@ Forma de avaliação
 
 • O trabalho será avaliado a partir dos seguintes itens:
 
-  O trabalho atendeu a todos os requisitos especi cados anteriormente;   
+  O trabalho atendeu a todos os requisitos especi cados anteriormente;
   
   O algoritmo de busca foi implementado de forma correta;
   
@@ -88,9 +95,9 @@ Forma de avaliação
 • Bônus:
 
   A interface grá ca não é objetivo deste trabalho, porém os grupos que implementarem uma boa interface grá ca  seja ela 2D ou 3D para representar o ambiente e as movimentações do agente, receberão até 10 pontos extras na nota.
- 
+
  Disposições Finais
- 
+
 • A entrega deverá ser realizada via Ambiente Moodle, até o dia 07/05/2017 às 23:59 em tarefa especí ca;
 
 • Comece a fazer este trabalho logo, enquanto o prazo para terminá-lo está tão longe quanto jamais poderá estar.
